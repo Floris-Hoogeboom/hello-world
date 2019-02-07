@@ -1,0 +1,198 @@
+flori@LAPTOP-V7C59VPF MINGW64 ~
+$ git config --global user.name "Floris"
+
+flori@LAPTOP-V7C59VPF MINGW64 ~
+$ git config --global user.name
+Floris
+
+flori@LAPTOP-V7C59VPF MINGW64 ~
+$ git config --global user.email 627366@student.inholland.nl
+
+flori@LAPTOP-V7C59VPF MINGW64 ~
+$ git config --global user.email
+627366@student.inholland.nl
+
+flori@LAPTOP-V7C59VPF MINGW64 ~
+$ git config --global user.email "627366@student.inholland.nl"
+
+flori@LAPTOP-V7C59VPF MINGW64 ~
+$ git config --global user.email 627366@student.inholland.nl
+
+flori@LAPTOP-V7C59VPF MINGW64 ~
+$ mkdir hello-world
+
+flori@LAPTOP-V7C59VPF MINGW64 ~
+$ ls
+'3D Objects'/         Desktop/       IntelGraphicsProfiles/  'Mijn documenten'@         ntuser.dat.LOG1                                                                                ntuser.ini      Searches/
+ AppData/             Documents/     Links/                   Music/                    ntuser.dat.LOG2                                                                                OneDrive/       SendTo@
+'Application Data'@   Downloads/    'Local Settings'@         NetHood@                  NTUSER.DAT{9d44ef3c-085d-11e9-9045-b4b686eddcb1}.TM.blf                                        Pictures/       Sjablonen@
+ Contacts/            Favorites/    'Menu Start'@             Netwerkprinteromgeving@   NTUSER.DAT{9d44ef3c-085d-11e9-9045-b4b686eddcb1}.TMContainer00000000000000000001.regtrans-ms   Recent@         Videos/
+ Cookies@             hello-world/   MicrosoftEdgeBackups/    NTUSER.DAT                NTUSER.DAT{9d44ef3c-085d-11e9-9045-b4b686eddcb1}.TMContainer00000000000000000002.regtrans-ms  'Saved Games'/
+
+flori@LAPTOP-V7C59VPF MINGW64 ~
+$ cd hello-world/
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world
+$ git init
+Initialized empty Git repository in C:/Users/flori/hello-world/.git/
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ touch text.txt
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ ls
+text.txt
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        text.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git add text.txt
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git add .
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   text.txt
+
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git commit -m "created text.txt"
+[master (root-commit) 91ec46a] created text.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 text.txt
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git config --global use.username "floris.hoogeboom"
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git config --global use.username "Floris.Hoogeboom"
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git remote add origin https://github.com/Floris-Hoogeboom/hello-world.git
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 248 bytes | 82.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Floris-Hoogeboom/hello-world.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Floris-Hoogeboom/hello-world
+   91ec46a..54de744  master     -> origin/master
+Updating 91ec46a..54de744
+Fast-forward
+ text.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git branch
+* master
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git branch develop
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git branch
+  develop
+* master
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git checkout develop
+Switched to branch 'develop'
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (develop)
+$ git add .
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (develop)
+$ git commit -m "++"
+[develop 156bfea] ++
+ 1 file changed, 1 insertion(+)
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (develop)
+$ git push -u origin develop
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 292 bytes | 73.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'develop' on GitHub by visiting:
+remote:      https://github.com/Floris-Hoogeboom/hello-world/pull/new/develop
+remote:
+To https://github.com/Floris-Hoogeboom/hello-world.git
+ * [new branch]      develop -> develop
+Branch 'develop' set up to track remote branch 'develop' from 'origin'.
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (develop)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git checkout develop
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (develop)
+$ git pull
+Already up to date.
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (develop)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git pull
+Already up to date.
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git merge develop
+Updating 54de744..156bfea
+Fast-forward
+ text.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+flori@LAPTOP-V7C59VPF MINGW64 ~/hello-world (master)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/Floris-Hoogeboom/hello-world.git
+   54de744..156bfea  master -> master
